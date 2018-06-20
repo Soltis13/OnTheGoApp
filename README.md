@@ -2,10 +2,10 @@
 
 ## Depending on team size, assign roles for responsibiliites.
 
-    Front End - Designer (Pages layout, font, colors, CSS)  
-    Front End - Coder (frameworks used, coding mvp, HTML )  
-    Back End - Architect (database, github, firebase  
-    Back End - Coder ( coding MVP, javascript,   
+    Front End - Designer (Pages layout, font, colors, responsive design choices)  
+    Front End - Coder (frameworks used, coding mvp, HTML, CSS )  
+    Back End - Architect (database, github, firebase  , APIs )
+    Back End - Coder ( coding MVP, javascript,   )
     Project Lead (User and Design Requirements, timeline, leading meetings, email and github communication)  
     Tester/s - (Debug and review mvps)  
   
@@ -13,7 +13,9 @@
  ## Team Members
     Lisa
     Abbi
-    Ch
+    Chery
+    Scott
+    Jag
   
  ## Tools
     Trello
