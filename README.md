@@ -70,10 +70,23 @@
         schedule and tiem of upcoming games
         odds of winning
 
-
+    2.Shopping API page
+        Enter item to buy and your city location
+        Pull Amazon sales info and display on screen
+        Pull ebay or craigs listings 
+        compare prices and show savings.
   
+    3. Study Meetup app
+        User 1 creates study time - input location and time.
+        app puls google maps data and displays (Name, , Category, Location, Time)
+        user 2 see's database table of possible meetups and can click on location for google map
   
-  
+    4. Movie App API
+        User enters location and movie interest
+        App finds local movie times, and locations
+        outputs to screen - 
+        
+     5. 
   
   
 
