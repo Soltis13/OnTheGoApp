@@ -1,0 +1,30 @@
+body {
+  background-image: url(../images/crowd2.jpg);
+}
+
+.logo {
+  width: 700px;
+  height: 150px;
+  left: 25%;
+  padding-top: 20px;
+  position: relative;
+}
+
+.textbox {
+  width: 1000px;
+  position: relative;
+  left: 15%;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 100px;
+  position: relative;
+  left: 45%;
+  margin-top: 30px;
+}
+
+
