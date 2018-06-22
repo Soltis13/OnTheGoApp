@@ -1,0 +1,17 @@
+Java Script Library Ideas
+
+
+1) Leaflet:  JavaScript library for mobile-friendly interactive maps  **  If we use maps??
+
+
+2) JavaScript 3D library:  -  Make back ground 3D  or Side bar??
+The aim of the project is to create an easy to use, lightweight, 3D library. The library provides <canvas>, <svg>, CSS3D and WebGL renderers.
+Homepage
+
+
+3) IONIC:    Advanced HTML5 Mobile App Framework. A beautiful front-end framework for developing hybrid mobile apps in HTML5. Best friends with AngularJS.
+
+4)  Video.js -   If we use videos - side bar??
+
+5)  Chart.js
+Simple HTML5 Charts using the <canvas> tag   USE For side bar?  or 8 results/photos
