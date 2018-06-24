@@ -1,29 +1,30 @@
 body {
-  background-image: url(../images/crowd2.jpg);
+  background-image: url(../images/usethis.jpg);
 }
 
 .logo {
   width: 700px;
   height: 150px;
-  left: 25%;
+  left: 600px;
   padding-top: 20px;
   position: relative;
 }
 
 .textbox {
-  width: 1000px;
+  width: 500px;
+  height: 45px ;
   position: relative;
-  left: 15%;
+  left: 36%;
   margin-top: 20px;
 }
 
 .button {
   background-color: black;
   color: white;
-  height: 40px;
-  width: 100px;
+  height: 80px;
+  width: 250px;
   position: relative;
-  left: 45%;
+  left: 42%;
   margin-top: 30px;
 }
 
