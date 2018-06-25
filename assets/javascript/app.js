@@ -1,3 +1,13 @@
+//Code  SSoltis
+//Use AJAX calls to 
+//1. search for ip location
+//2. find lat and longitude from ip addresss
+//3. call foursquare to find local places with search term
+//4. call foursquare with local places and find information on them to display
+
+// search array "search"
+//looks for click on button in html "#button"
+//outputs to table "#table"
 
 
 
@@ -52,24 +62,44 @@ function SearchWeb(){
       async: false
     }).then(function(response) {
       console.log("Success got data", response);
+
+      var results = response.response.venues
+      console.log(results)
+  
+      for (i = 0; i < results.length; i++){
+        var FourURL = "https://api.foursquare.com/v2/venues/"+results[i].id+"?&client_id=GMCZAGCA1IOH5QCGZYJGYVD0YJLAAUGUNLWUJGGOC2IIXKUU&client_secret=IJUOBHZNIW3PY124FYWWAVULHIHDSNW2OZ1GPKDW2ARO1R2V&v=20180623";
       
-      var results = response.response.venues;
-       console.log(results)
-       //loop to display 
-       for (var i = 0; i < results.length; i++){
-         console.log(results[i].name)
-         console.log(results[i].location.address)
-         console.log(results[i].location.distance)
-         //define the outputvariables
-         var BusinessName = results[i].name;
-         var BusinessLocation = results[i].location.address;
-         var BusinessDistance = results[i].location.distance;
-         var MapLocation = response;
-         $("#table > tbody").append("<tr> <td>" + BusinessName + "</td> </tr>" 
-         + "<tr> <td>" + BusinessLocation+ "</td> </tr>" 
-         + "<tr> <td>" + BusinessDistance +" Meters" + "</td> </tr>" 
-         + "<tr> <td>" + MapLocation + "</td> </tr>")
-       }
+        $.ajax({
+          url: FourURL,
+          // params: params,
+          method: "GET",
+          async: false
+        }).then(function(data) {
+          console.log("Success got data", data);
+
+          var IdResults = data.response.venue
+
+            console.log(IdResults.name)
+            console.log(IdResults.location.address)
+            console.log(IdResults.shortUrl)
+            console.log(IdResults.hours.status)
+      
+          var BusinessName = IdResults.name
+          var BusinessAddress = IdResults.location.address
+          var WebsiteUrl = IdResults.shortUrl
+          var BusinessHours = IdResults.hours.status
+              
+          $("#table > tbody").append("<tr> <td>" + BusinessName + "</td> </tr>" 
+         + "<tr> <td>" + BusinessAddress+ "</td> </tr>" 
+         + "<tr> <td> Website: " + WebsiteUrl +"</td> </tr>" 
+         + "<tr> <td>" + BusinessHours + "</td> </tr>")
+       
+
+
+    
+        })
+      }
+
   });
 }
 SearchWeb();
