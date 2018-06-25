@@ -62,3 +62,35 @@ function renderButtons() {
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
+
+  //onclick of button , call the new page and display search
+
+  $(document).on("click", "#clickBtn", displayInfo);
+
+  //TODO - pull text info from 
+  function displayInfo(event){
+
+    // move to second page indexp2.html
+
+    window.location.href = "indexp2.html"
+
+
+    event.preventDefault();
+      console.log($(this).attr("data-name"));
+
+      console.log($(this).attr("data-name"));
+
+    //grab input from button clicked
+    var ButtonValue = $("#clickBtn").val(["0"].innerHTML);
+
+    console.log(ButtonValue)
+    
+    var ButtonValueClick = ButtonValue.innerHTML;
+
+    console.log(ButtonValueClick)
+
+    
+
+    //call render search data function
+    SearchWeb();
+  };
