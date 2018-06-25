@@ -1,0 +1,86 @@
+body {
+  background-image: url(../images/usethis.jpg);
+}
+
+.logo {
+  width: 25%;
+  height: 25%;
+  margin-left: 590px;;
+  padding-top: 20px;
+  margin-bottom: 10px;
+ 
+}
+
+/* If not using bootstrap input*/
+  /*.textbox {
+  width: 500px;
+  height: 45px ;
+  position: relative;
+  left: 36%;
+  margin-top: 20px;
+} */
+
+.button {
+  background-color:#00004d;
+  color: white;
+  height: 80px;
+  width: 550px;
+  margin-top: 10px;
+  font-family: 'Yeseva One', cursive;
+  font-size: 35px;
+
+  border-radius: 15px;
+  padding: 20px;  
+  
+  -webkit-transition-duration: 0.4s; /*Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color:#00004d;
+  border-color: #00004d;
+}
+
+.clickBtn {
+  width: 200px;
+}
+
+p {
+  color: red;
+  font-family: 'Trocchi', serif;
+  float: left;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.subfooter {
+  margin-left:230px;
+  margin-top: 250px;
+}
+
+
