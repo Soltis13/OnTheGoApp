@@ -94,10 +94,10 @@ $( document ).ready(function() {
             var WebsiteUrl = IdResults.shortUrl
             var BusinessHours = IdResults.hours.status
                 
-            $("#table > tbody").append("<tr> <td>" + BusinessName + "</td> </tr>" 
+            $("#table > tbody").append("<div> <tr> <td>" + BusinessName + "</td> </tr>" 
           + "<tr> <td>" + BusinessAddress+ "</td> </tr>" 
-          + "<tr> <td> Website: " + WebsiteUrl +"</td> </tr>" 
-          + "<tr> <td>" + BusinessHours + "</td> </tr>")
+          + "<tr> <td> <br> <a href='" + WebsiteUrl +"'>Website</a></td> </tr><br>" 
+          + "<tr> <td>" + BusinessHours + "</td> </tr> </div><br>")
         
 
 
