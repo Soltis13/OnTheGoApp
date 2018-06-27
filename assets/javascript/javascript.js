@@ -1,3 +1,6 @@
+//Initial Global Variables
+
+
 //Initialize Firebase
 var config = {
     apiKey: "AIzaSyDf2FIuyY6UKCUuCpihnYA-1OSWKSEe9jY",
@@ -8,6 +11,7 @@ var config = {
     messagingSenderId: "1029016705388"
 };
 firebase.initializeApp(config);
+
 // Create a variable to reference the database
 var database = firebase.database();
 
@@ -31,81 +35,72 @@ database.ref().push({
 // Function to display buttons
 function renderButtons() {
 
-    $("#clickBtn").empty();
-    $("#table > tbody").empty();
-    $(".mainsection").removeClass("section")
+  $("#clickBtn").empty();
+  $("#table > tbody").empty();
+  $(".mainsection").removeClass("section")
 
-    // Looping through the array
-    for (var i = 0; i < options.length; i++) {
+  // Looping through the array
+  for (var i = 0; i < options.length; i++) {
 
-        // Dynamicaly generating buttons for each options in the array
-        var btn = $("<button>");
-        btn.addClass("button");
-      
-        // Adding a data-attribute
-        btn.attr("data-name", options[i]);
-        // Providing the initial button text
-        btn.text(options[i]);
-        // Adding the button to the buttons-view div
-        $("#clickBtn").append(btn);
-    }
+    // Dynamicaly generating buttons for each options in the array
+    var btn = $("<button>");
+    btn.addClass("btn btn-success button");
+  
+    // Adding a data-attribute
+    btn.attr("data-name", options[i]);
 
+    // Providing the initial button text
+    btn.text(options[i]);
+
+    // Adding the button to the buttons-view div
+    $("#clickBtn").append(btn);
+  }
 }
-
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
 
-  //onclick of button , call the new page and display search
-   //document.getElementsByName("button").onclick = displayInfo
-  $(document).on("click", ".button", displayInfo);
-  $(document).on("click", ".Back", renderButtons);
+//onclick of button , call the new page and display search
+$(document).on("click", ".button", displayInfo);
 
-  //TODO - pull text info from 
-  function displayInfo(){
+//on click of back button, call the previous buttons
+$(document).on("click", ".Back", renderButtons);
 
-    // move to second page indexp2.html
 
-   // window.location.href = "indexp2.html"
+function displayInfo(){  
+  event.preventDefault();
 
+  //console.log($(this).attr("data-name"));
+
+  //grab input from button clicked
+  ButtonValue = $(this).attr("data-name")
   
-    //event.preventDefault();
+  //console.log(ButtonValue)
+  
+  var ButtonValueClick = ButtonValue.innerHTML;
 
-    console.log((this));
+  // console.log(ButtonValueClick)
 
-    console.log($(this).attr("data-name"));
+  $("#clickBtn").empty();
 
-    //grab input from button clicked
-    ButtonValue = $(this).attr("data-name")
+  // Dynamicaly generating buttons for each options in the array
+  var button = $("<button>");
+
+  button.addClass("btn btn-primary Back ");
+  
+  // Adding a data-attribute
+  button.attr("data-name", "Back");
+
+  // Providing the initial button text
+  button.text("Back");
+  
+  // Adding the button to the buttons-view div
+  $("#clickBtn").append(button);
+  $(".mainsection").addClass("section")
     
-
-    console.log(ButtonValue)
-    
-    var ButtonValueClick = ButtonValue.innerHTML;
-
-    console.log(ButtonValueClick)
-
-    $("#clickBtn").empty();
-    // Dynamicaly generating buttons for each options in the array
-    var button = $("<button>");
-    button.addClass("Back");
-   
-    
-    // Adding a data-attribute
-    button.attr("data-name", "Back");
-    // Providing the initial button text
-    button.text("Back");
-    // Adding the button to the buttons-view div
-    $("#clickBtn").append(button);
-    $(".mainsection").addClass("section")
-    
-
-    
-
 
   var ipadd = "https://ipinfo.io/?token=$TOKEN";
  
-
   $.ajax({
       url: ipadd,
       method: "GET",
@@ -113,8 +108,6 @@ renderButtons();
   }).done( function(response) {
     console.log(response.ip, response.country);
   }, "jsonp")
-
-
 
   //ajax call for location
   $.ajax({
@@ -130,52 +123,50 @@ renderButtons();
       console.log(lati)
       console.log(long)
   });
-    //call render search data function
-    SearchWeb(ButtonValue);
-  };
+
+  //call render search data function
+  SearchWeb(ButtonValue);
+
+};
 
 
-  function renderResults(data) {
-    console.log("Success got data", data);
+function renderResults(data) {
+  //console.log("Success got data", data);
 
-    var IdResults = data.response.venue
+  var IdResults = data.response.venue
 
-    if(typeof(IdResults.hours)=="undefined"){
-   
-        var BusinessHours = "None"
-    }else{
-        console.log(IdResults.hours.status)
-        var BusinessHours = IdResults.hours.status
-    }
-      console.log(IdResults.name)
-      console.log(IdResults.location.address)
-      console.log(IdResults.shortUrl)
-      console.log(BusinessHours)
-      
-
-    var BusinessName = IdResults.name
-    var BusinessAddress = IdResults.location.address
-    var WebsiteUrl = IdResults.shortUrl
-    
-        
-    $("#table > tbody").append("<div> <tr> <td>" + BusinessName + "</td> </tr>" 
-  + "<tr> <td>" + BusinessAddress+ "</td> </tr>" 
-  + "<tr> <td> <br> <a href='" + WebsiteUrl +"'>Website</a></td> </tr><br>" 
-  + "<tr> <td>" + BusinessHours + "</td> </tr> </div><br>")
+  if(typeof(IdResults.hours)=="undefined"){
+  
+      var BusinessHours = "None"
+  }else{
+      //console.log(IdResults.hours.status)
+      var BusinessHours = IdResults.hours.status
   }
+    // console.log(IdResults.name)
+    // console.log(IdResults.location.address)
+    // console.log(IdResults.shortUrl)
+    // console.log(BusinessHours)
+    
+
+  var BusinessName = IdResults.name
+  var BusinessAddress = IdResults.location.address
+  var WebsiteUrl = IdResults.shortUrl
+  
+      
+  $("#table > tbody").append("<div> <tr> <td>" + BusinessName + "</td> </tr>" 
++ "<tr> <td>" + BusinessAddress+ "</td> </tr>" 
++ "<tr> <td> <br> <a href='" + WebsiteUrl +"'>Website</a></td> </tr><br>" 
++ "<tr> <td>" + BusinessHours + "</td> </tr> </div><br>")
+}
 
 
   function SearchWeb(search){
-    //get value of button clicked
 
-
-      //var SearchButton = $(this).attr("data-name");
-      var SearchButton = search;
-      console.log(search)
-    //search location for foursquare and searchbutton value
+    var SearchButton = search;
+    console.log(search)
+    
     //TODO - add limit search to 3? 4?
 
-    
     var queryURL = "https://api.foursquare.com/v2/venues/search?ll="+lati+","+long+"&query="+SearchButton+"&radius=4000&limit=1&client_id=5MSXZF21SC1HYLZTM2TNULYNLXU3SZ3L5OY5PPKONAZQJNNW&client_secret=PWA55PPGLPWVB2F34AWNYT4YX4TNQS0JRN0Y2H0Q4WPCNQTZ&v=20180623";
 
     //ajax call for search term venue
@@ -200,10 +191,7 @@ renderButtons();
             async: false
           }).then(function(data) {
             renderResults(data)
-        
 
-
-      
           })
         }
 
