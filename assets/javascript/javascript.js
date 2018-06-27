@@ -57,6 +57,23 @@ function renderButtons() {
   }
 }
 
+//User Input to render a new buttoon
+$("#addCategory").on("click", function (event) {
+    event.preventDefault();
+    // This line grabs the input from the textbox
+    var input = $("input").val().trim();
+    console.log(input)
+
+    //Adding option from the textbox to our array
+    options.push(input);
+
+    database.ref("/test/").push({
+        input: input,
+    })
+
+    // Calling renderButtons
+    renderButtons();
+});
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
 
