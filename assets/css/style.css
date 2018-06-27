@@ -83,4 +83,18 @@ p {
   margin-top: 250px;
 }
 
+@keyframes rainbow {
+  0%   { color: #97E649; }
+  16%  { color: #35fec8; }
+  33%  { color: #35a9fe; }
+  49%  { color: #e135fe; }
+  66%  { color: #FE6C52; }
+  82%  { color: #F4EE44; }
+  100% { color: #97E649; }
+} 
 
+ 
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: lightblue;
