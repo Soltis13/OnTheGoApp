@@ -1,3 +1,74 @@
+
+.button {
+  background-color:#00004d;
+  color: white;
+  height: 50px;
+  width: 200px;
+  margin: 20px;
+  font-family: 'Yeseva One', cursive;
+  font-size: 35px;
+
+  border-radius: 15px;
+  padding: 20px;  
+  
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.maintext {
+
+  margin: auto;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.footer {
+  
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  height: 100px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card{
+  margin: 10px 0;
+}
+
+#clickBtn{
+  margin: 10px 0;
+}
+/*
+
 body, .mainsection {
   background-image: url(../images/usethis.jpg);
 }
@@ -8,18 +79,18 @@ body, .mainsection {
 }
 
 
-
-
 .logo {
   width: 25%;
   height: 25%;
-  /*margin-left: 590px;;*/
+  /*margin-left: 590px;
   padding-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
  
 }
+
+*/
 
 /* If not using bootstrap input*/
   /*.textbox {
@@ -30,22 +101,10 @@ body, .mainsection {
   margin-top: 20px;
 } */
 
-.button {
-  background-color:#00004d;
-  color: white;
-  height: 80px;
-  width: 550px;
-  margin-top: 10px;
-  font-family: 'Yeseva One', cursive;
-  font-size: 35px;
 
-  border-radius: 15px;
-  padding: 20px;  
-  
-  -webkit-transition-duration: 0.4s; /*Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+
+
+/*
 
 .button:hover {
   background-color: white;
@@ -87,7 +146,7 @@ p {
   opacity: 1;
   right: 0;
 }
-
+/*
 .subfooter {
   margin-left:230px;
   margin-top: 250px;
@@ -104,7 +163,10 @@ p {
 } 
 
  
-
+/*
 @media only screen and (orientation: landscape) {
     body {
         background-color: lightblue;
+
+
+

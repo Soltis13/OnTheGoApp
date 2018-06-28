@@ -1,0 +1,19 @@
+body {
+    background-image: url(../images/iphone.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  .content1{
+    position: absolute;
+
+    margin: 15% 0 ;
+    padding: 0;
+    height: 50em;
+    
+}
+iframe{
+    
+    overflow-x: hidden; overflow-y: scroll
+}
