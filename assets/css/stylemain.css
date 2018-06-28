@@ -1,0 +1,52 @@
+body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+.content1{
+    position: absolute;
+    border: 2px solid green;
+    margin: 15% 0 ;
+    height: 50em;
+    
+}
+.iframe{
+   
+    overflow-x: hidden; overflow-y: scroll
+}
+
+.logo{
+    width: 93%
+}
+#input{
+    width:16em;
+    margin: 1em 0;
+}
+
+.button{
+    width: 340px;
+    margin: .5em 0 ;
+    height: 4em;
+
+}
+.mainsection {
+    width: 350px;
+    padding:1em;
+    background-color: white ;
+
+}
+
+.section{
+    background-color: white ;
+    background-image: url(../images/jpg);
+  }
+
+.subfooter{
+    margin: auto 2em;
+    position: relative;
+    bottom: 0px;
+    width: 325px;
+}
+
