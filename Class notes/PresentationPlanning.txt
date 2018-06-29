@@ -1,0 +1,49 @@
+1 -min  What Problem are we trying to solve : Your overall application conccep 
+            (Elevator pitch section) 
+            Google search in the local area for a keyword but in an easy user interface, 1 button click application.
+            FOr people are on the go, in a new area.
+            people with businesy squeduals
+            lazy, looking for easy 
+     
+3 min   Story of Development: design processes  
+            Initial Concept Brainstorming
+                Images of white board
+                app ideas and problems to solve
+                api research, what can we do and not do.
+            Picked Movie Api did inital research and api dev.
+                As movie lovers, we were able to search for current movies and reviews, but we also wanted to search local for movie locations but could not.
+                We couldnt get the api to work with showing all the data that we ultimatly wanted.
+            
+            Pivoted to a phone location search app.
+               
+            Concept Wireframes
+            Division of effort, assigned roles
+                Front end
+                design
+                API 
+                Firebase
+
+2 min   Why we choose this specific application: motivation for the development 
+            During the initial effort,  In our group work, we wanted to find meeting location in the area on the go to work on our area.
+            Felt this was a need that could be sold to a mobile customer base vs the computer screen (movie app).  in this case the use is looking for an elegant and easy app to help, search on the go.
+
+1 min   How we solved this issue: technologies you used 
+            Ajax request
+            call Foursquare for terms search
+            call with the id from that search for specifics 
+            IP address location 
+            HereAPI
+            Bootstrap
+            firebase
+            animate.css - Animated infinite wobble
+
+3 -min   Demonstration of its functionality (Ideas for future development and improvments)  
+            Show the app
+            show it as user friendly, allows the user to add new earch terms and use on the app on the go.
+            Here is what we want to build on in the future
+                API features (alts to foursquare)
+                Marketing study into what users want in the search results (hours, reviews)
+                Revenue streams / options
+                    Ads, paid application, affiliate linking
+                Update to local database and save this data to analysis of what users are searching for, where.  Sales of this meta data.
+            Questions
