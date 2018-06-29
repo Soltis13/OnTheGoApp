@@ -3,14 +3,15 @@ var ipurl = "http://api.ipstack.com/131.212.248.60?access_key=a07cea42b7d1f81063
 var lati=0
 var long=0
 
+
 //Initialize Firebase
 var config = {
-    apiKey: "AIzaSyDf2FIuyY6UKCUuCpihnYA-1OSWKSEe9jY",
-    authDomain: "groupproject1-955fc.firebaseapp.com",
-    databaseURL: "https://groupproject1-955fc.firebaseio.com",
-    projectId: "groupproject1-955fc",
-    storageBucket: "groupproject1-955fc.appspot.com",
-    messagingSenderId: "1029016705388"
+  apiKey: "AIzaSyDf2FIuyY6UKCUuCpihnYA-1OSWKSEe9jY",
+  authDomain: "groupproject1-955fc.firebaseapp.com",
+  databaseURL: "https://groupproject1-955fc.firebaseio.com",
+  projectId: "groupproject1-955fc",
+  storageBucket: "groupproject1-955fc.appspot.com",
+  messagingSenderId: "1029016705388"
 };
 firebase.initializeApp(config);
 
