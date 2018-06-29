@@ -42,7 +42,7 @@ function renderButtons() {
 
     // Dynamicaly generating buttons for each options in the array
     var btn = $("<button>");
-    btn.addClass("btn btn-success button");
+    btn.addClass("btn btn-primary button");
   
     // Adding a data-attribute
     btn.attr("data-name", options[i]);
@@ -140,10 +140,12 @@ function renderResults(data) {
   var WebsiteUrl = IdResults.shortUrl
   
   
+  
   $("#table > tbody").append("<div> <tr> <td>" + BusinessName + "</td> </tr>" 
 + "<tr> <td>" + "<br>"+ BusinessAddress+ "</td> </tr>" 
 + "<tr> <td> <br> <a href='" + WebsiteUrl +"'>Website</a></td> </tr><br>" 
-+ "<tr> <td>" + BusinessHours + "</td> </tr> </div><br>")
++ "<tr> <td>" + BusinessHours + "</td> </tr><br>"
++ "<tr> <td> <img src='assets/images/Location.JPG' alt='Map Location' height='auto' width='250px'> </td> </tr> </div><br>")
 }
 
 //

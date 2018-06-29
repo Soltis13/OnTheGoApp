@@ -35,13 +35,14 @@
             HereAPI
             Bootstrap
             firebase
-            animate.css - Animated infinite wobble
+            animate.css - `Animated infinite wobble
+            jquery
 
 3 -min   Demonstration of its functionality (Ideas for future development and improvments)  
             Show the app
             show it as user friendly, allows the user to add new earch terms and use on the app on the go.
             Here is what we want to build on in the future
-                API features (alts to foursquare)
+                API features (alts to foursquare) - google places / Radar / Flamyngo  - in case foursquares api cost is to onerous
                 Marketing study into what users want in the search results (hours, reviews)
                 Revenue streams / options
                     Ads, paid application, affiliate linking
