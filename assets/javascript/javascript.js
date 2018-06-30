@@ -157,7 +157,7 @@ function renderResults(data) {
     
     //TODO - add limit search to 3? 4? 
 
-    var queryURL = "https://api.foursquare.com/v2/venues/search?ll="+lati+","+long+"&query="+SearchButton+"&radius=4000&limit=1&client_id=5MSXZF21SC1HYLZTM2TNULYNLXU3SZ3L5OY5PPKONAZQJNNW&client_secret=PWA55PPGLPWVB2F34AWNYT4YX4TNQS0JRN0Y2H0Q4WPCNQTZ&v=20180623";
+    var queryURL = "https://api.foursquare.com/v2/venues/search?ll="+lati+","+long+"&query="+SearchButton+"&radius=4000&limit=3&client_id=5MSXZF21SC1HYLZTM2TNULYNLXU3SZ3L5OY5PPKONAZQJNNW&client_secret=PWA55PPGLPWVB2F34AWNYT4YX4TNQS0JRN0Y2H0Q4WPCNQTZ&v=20180623";
 
     //ajax call for search term venue
     $.ajax({
