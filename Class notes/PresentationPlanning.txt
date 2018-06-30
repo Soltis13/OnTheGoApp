@@ -46,7 +46,9 @@
 
             One hand eazy and efficient usage of the App was our primary focus. This defined the work and scope of the                      project.
             
-            MVP 2.0 - Future funcationality will add user authentication that will feaure a customized list of button for each             iser.                 Currently we are gathering data in firebase to understand out users needs and wants better.             Any new button created             last for the duration of the session however the data is passed on to firebase             for analysis.  
+            MVP 2.0 - Future funcationality will add user authentication that will feaure a customized list of button for each             user.                 
+            Currently we are gathering data in firebase to understand out users needs and wants better.             
+            Any new button created last for the duration of the session however the data is passed on to firebase             for analysis.  
 
             Show the app - 
             show it as user friendly, allows the user to add new earch terms and use on the app on the go.
