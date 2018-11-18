@@ -17,13 +17,13 @@ Key Categories:- Coffee/ Fast Food , Study , Beer , Gas + Add more buttons (cust
 We are folks in a Coding Bootcamp looking for a place to meet once the original location turns out to be a bust..
 Very thirsty humans looking for beer  (need i say more)
 
-API considreations
+###API considreations   
 
 Eventful website, open source covering local events.
 http://api.eventful.com
 
 
-Java Script Library Ideas
+###Java Script Library Ideas   
 
 Leaflet: JavaScript library for mobile-friendly interactive maps ** If we use maps??
 
